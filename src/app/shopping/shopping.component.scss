@@ -1,0 +1,52 @@
+.shop{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.me{
+    display: flex;
+    // padding-left: 4rem;.
+    padding: 24rem auto;
+    position: relative;
+    top: 25rem;
+    h3{
+        margin-left: 10rem;
+    }
+}
+
+.parent{
+    width: 98%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.034);
+    position: absolute;
+    top: 0;
+
+    .message{
+        width: 50%;
+        height: 200px;
+        background-color: teal;
+        margin: 250px auto;
+
+        h1{
+            font-size: 2.5rem;
+            padding-bottom: 3rem;
+        }
+        button{
+            align-items: center;
+            margin-left: 5rem;
+            font-size: 2.5rem;
+            padding: 0 auto;
+            width: 15rem;
+            height: 100px;
+            color: orange ;
+            cursor: pointer;
+
+            &:hover{
+                color: black;
+                background-color: rgba(255, 166, 0, 0.502);
+            }
+        }
+        // padding-top: 10px;
+    }
+}

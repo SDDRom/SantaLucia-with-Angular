@@ -1,0 +1,35 @@
+<!-- <section>
+    <div class="">
+        <div class="shop" *ngFor="let shopProduct of shopProducts">
+            <h1>{{shopProduct.name}}</h1>
+            <p>{{shopProduct.price}}</p>
+        </div>
+    </div>
+</section>
+<router-outlet></router-outlet> -->
+
+<h3 class="shop">Shop Cart</h3>
+<div class="cart-item" *ngFor="let item of items; let i = index">
+    <span> {{item.product.name}} </span>
+    <span>  {{item.product.price}}FCFA 
+        <button (click)="decrease(i)"> -</button>
+        {{item.counter}}
+        <button (click)="increase(i)"> +</button> <br>
+     </span>
+     <!-- <button (click)="clear(i)" >Clear</button> -->
+     <span>      <button (click)="del(item)">clear</button> </span>
+
+</div>
+<div class="me">
+    <h3  >Total Product {{total}} </h3>
+    <h3>Total Fee of Product {{totalP}}FCFA</h3>
+    <h3>Total {{totalCart}}FCFA</h3>
+</div>
+
+<div  class="parent" *ngIf="parent" (click)="parentMessage()">
+    <div class="message" *ngFor="let item of items" >
+        <h1>Should this product be remove from cart?</h1>
+        <button (click)="del(item)">YES</button>
+        <button (click)="parentMessage()">Cancel</button>
+    </div>.
+</div>

@@ -1,0 +1,20 @@
+<div class="nav">
+    <ul>
+        <div class="logo">
+            <h1>SantaLucia</h1>
+        </div>
+        <li>Home</li>
+        <li>About</li>
+        <li>Product</li>
+        <div class="shop"><button routerLink="/shopping" >ShopCart</button></div>
+    </ul>
+</div>
+
+<div class="product">
+   <div *ngFor="let p of Product" class="pro">
+    <h3>{{p.name}}</h3>
+    <h4> {{p.price}}FCFA</h4>
+    <p>{{p.description}}</p>
+    <button id="change" type="button" (click)="addToCart($event,p)" >Add To Cart</button>
+</div>
+</div>
